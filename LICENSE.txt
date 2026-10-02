@@ -1,0 +1,17 @@
+MJYT binaries and project documentation.
+
+Copyright (c) the applicable MJYT copyright holder(s).
+All rights reserved.
+
+No open-source or public redistribution license has been selected for MJYT itself.
+Nothing in this repository grants permission to copy, modify, redistribute,
+sublicense, sell, or publish MJYT application binaries or proprietary MJYT
+materials beyond rights provided by applicable law or separately granted in
+writing by the copyright holder(s).
+
+This public repository is a documentation and release-information repository.
+It does not publish the MJYT application source code.
+
+Third-party components and assets retain their own licenses. See:
+
+docs/THIRD_PARTY.md

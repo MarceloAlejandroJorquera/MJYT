@@ -1,0 +1,16 @@
+# MJYT public repository allowlist.
+# Everything is ignored unless explicitly allowed below.
+*
+
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/CHANGELOG.md
+!/RELEASE_NOTES_v1.md
+!/LICENSE.txt
+!/SECURITY.md
+!/SUPPORT.md
+!/CONTRIBUTING.md
+
+!/docs/
+!/docs/**
