@@ -1,5 +1,11 @@
 # MJYT
 
+[![Release](https://img.shields.io/badge/release-v1-2ea44f?style=flat-square)](RELEASE_NOTES_v1.md)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D4?style=flat-square)
+![Runtime](https://img.shields.io/badge/runtime-portable%20single%20EXE-6f42c1?style=flat-square)
+![Architecture](https://img.shields.io/badge/architecture-native%20Win32-1f6feb?style=flat-square)
+![Source](https://img.shields.io/badge/source-proprietary-lightgrey?style=flat-square)
+
 MJYT is a native Windows x64 YouTube downloader focused on a compact, responsive desktop UI, high-throughput downloads, retained queue workflows, and a portable single-executable runtime.
 
 > **Repository scope:** this public repository contains MJYT documentation, release notes, screenshots, and release metadata only. **MJYT application source code is not published here.** GitHub's automatically generated **Source code (zip/tar.gz)** downloads contain only this documentation repository; they are not the application's source code.
@@ -50,7 +56,23 @@ See [Usage](docs/USAGE.md) for a more complete walkthrough.
 
 ## Screenshots
 
-Public screenshots may be added under [`docs/images/`](docs/images/) after checking them for private paths, account information, or other local-only details.
+### Main window
+
+![MJYT main window](docs/images/01-main.png)
+
+| Add links | Benchmark |
+| --- | --- |
+| ![Add links modal](docs/images/02-links-modal.png) | ![Benchmark window](docs/images/03-benchmark.png) |
+
+| Benchmark report | Options |
+| --- | --- |
+| ![Benchmark report](docs/images/04-report.png) | ![Options window](docs/images/05-options.png) |
+
+| Options — additional settings | Options — additional settings II |
+| --- | --- |
+| ![Options additional settings](docs/images/06-options-ii.png) | ![Options additional settings II](docs/images/07-options-iii.png) |
+
+The screenshots are part of this documentation repository only; they do not contain or expose the MJYT application source code.
 
 ## Platform
 

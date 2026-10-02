@@ -1,13 +1,15 @@
 # Publication screenshots
 
-Only screenshots that are safe for public distribution should be added to this directory.
+The public README expects these files:
 
-Before committing a screenshot, check it for:
+- `01-main.png` — main window
+- `02-links-modal.png` — Add Multiple Links modal
+- `03-benchmark.png` — benchmark window
+- `04-report.png` — benchmark report
+- `05-options.png` — Options window
+- `06-options-ii.png` — additional Options view
+- `07-options-iii.png` — additional Options view
 
-- Local usernames or private filesystem paths.
-- Private or account-authenticated URLs.
-- Credentials, cookies, tokens, or API keys.
-- Personal notifications or unrelated desktop content.
-- Debug/internal build information that is not intended for the public repository.
+Before committing a screenshot, check it for local usernames or private filesystem paths, account-authenticated URLs, credentials/cookies/tokens, personal notifications, and internal debug/build information.
 
 MJYT application source code is not required for screenshots and must not be added here.
