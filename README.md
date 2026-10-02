@@ -1,10 +1,10 @@
 # MJYT
 
-[![Release](https://img.shields.io/badge/release-v1-2ea44f?style=flat-square)](RELEASE_NOTES_v1.md)
-![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D4?style=flat-square)
-![Runtime](https://img.shields.io/badge/runtime-portable%20single%20EXE-6f42c1?style=flat-square)
-![Architecture](https://img.shields.io/badge/architecture-native%20Win32-1f6feb?style=flat-square)
-![Source](https://img.shields.io/badge/source-proprietary-lightgrey?style=flat-square)
+[![Release: v1](https://img.shields.io/badge/release-v1-2ea44f?style=flat-square)](https://github.com/MarceloAlejandroJorquera/MJYT/releases)
+[![Platform: Windows 10/11 x64](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D4?style=flat-square)](#platform)
+[![Runtime: portable single EXE](https://img.shields.io/badge/runtime-portable%20single%20EXE-6f42c1?style=flat-square)](docs/RELEASE_ASSETS.md)
+[![Architecture: native Win32](https://img.shields.io/badge/architecture-native%20Win32-1f6feb?style=flat-square)](docs/REPOSITORY_SCOPE.md)
+[![License: proprietary](https://img.shields.io/badge/license-proprietary-lightgrey?style=flat-square)](LICENSE.txt)
 
 MJYT is a native Windows x64 YouTube downloader focused on a compact, responsive desktop UI, high-throughput downloads, retained queue workflows, and a portable single-executable runtime.
 
