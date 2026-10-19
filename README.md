@@ -1,120 +1,118 @@
 # MJYT
 
-[![Release: v1](https://img.shields.io/badge/release-v1-2ea44f?style=flat-square)](https://github.com/MarceloAlejandroJorquera/MJYT/releases)
-[![Platform: Windows 10/11 x64](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D4?style=flat-square)](#platform)
-[![Runtime: portable single EXE](https://img.shields.io/badge/runtime-portable%20single%20EXE-6f42c1?style=flat-square)](docs/RELEASE_ASSETS.md)
-[![Architecture: native Win32](https://img.shields.io/badge/architecture-native%20Win32-1f6feb?style=flat-square)](docs/REPOSITORY_SCOPE.md)
-[![License: proprietary](https://img.shields.io/badge/license-proprietary-lightgrey?style=flat-square)](LICENSE.txt)
-
-MJYT is a native Windows x64 YouTube downloader focused on a compact, responsive desktop UI, high-throughput downloads, retained queue workflows, and a portable single-executable runtime.
-
-> **Repository scope:** this public repository contains MJYT documentation, release notes, screenshots, and release metadata only. **MJYT application source code is not published here.** GitHub's automatically generated **Source code (zip/tar.gz)** downloads contain only this documentation repository; they are not the application's source code.
+MJYT v1.1 is a native Windows x64 YouTube downloader focused on a compact, responsive desktop UI and a portable single-executable runtime.
 
 ## Highlights
 
-- Download individual YouTube videos and playlists.
-- Choose download format, audio language/track policy, and subtitle policy.
+- Download public YouTube videos, standard playlists, generated radio Mixes, and public YouTube Music compilation playlists.
+- Choose video format, audio track/language, and subtitle policy.
 - Download adaptive media streams and supported live streams.
-- Embed metadata, cover artwork, and selected subtitles when supported by the destination container.
-- Queue multiple links, retain queue state, reorder pending work, retry items, and pause/resume supported transfers.
+- Embed metadata, cover artwork, and selected subtitles into the resulting media when supported.
+- Queue multiple links, reorder work, retry items, pause/resume supported transfers, and retain queue state.
 - Show video thumbnails directly in the queue.
-- Configure default format/audio/subtitle behavior, destination, paste behavior, and download speed limits.
-- Run a built-in throughput benchmark and review benchmark reports in the UI.
+- Configure destination, default format/audio/subtitle behavior, automatic paste-and-download behavior, bandwidth limits, and optional new-version checks.
+- Run the built-in download benchmark from the UI.
 - Native dark Windows interface with a portable application icon and no installer requirement.
-- No downloader, JavaScript engine, FFmpeg, or other helper executable is required beside the released MJYT executable at runtime.
+- No downloader, JavaScript engine, FFmpeg, or other helper executable is required at runtime.
 
 ## Download
 
-Official Windows x64 binaries are distributed from the repository's **Releases** page.
+For normal use, download the Windows x64 package from the [GitHub Releases page](https://github.com/MarceloAlejandroJorquera/MJYT/releases), extract it, and run `MJYTv1.1.exe`.
 
-For normal use, download:
+MJYT is portable. It does not require installation.
 
-```text
-MJYT-v1-windows-x64.zip
-```
+## Basic usage
 
-Extract it and run:
+1. Run `MJYTv1.1.exe`.
+2. Paste or add one or more supported YouTube links.
+3. Choose the destination and any format/audio/subtitle options you want.
+4. Start the download.
+5. Completed media is written directly to the selected destination.
 
-```text
-MJYTv1.exe
-```
+The **Add Links** dialog accepts YouTube video and playlist URLs. Malformed or unsupported text is ignored.
 
-The standalone `MJYTv1.exe` may also be attached directly to the release.
-
-MJYT is portable and does not require installation.
-
-## Quick start
-
-1. Run `MJYTv1.exe`.
-2. Add one or more supported YouTube links.
-3. Analyze the rows if needed, then choose format/audio/subtitle options.
-4. Select the destination and optional speed limit.
-5. Start or resume the queue.
-6. Completed media is written to the selected destination.
-
-See [Usage](docs/USAGE.md) for a more complete walkthrough.
 
 ## Screenshots
 
 ### Main window
+![Main window](docs/images/01-main.png)
 
-![MJYT main window](docs/images/01-main.png)
+### Add Links dialog
+![Add Links dialog](docs/images/02-links-modal.png)
 
-| Add links | Benchmark |
-| --- | --- |
-| ![Add links modal](docs/images/02-links-modal.png) | ![Benchmark window](docs/images/03-benchmark.png) |
+### Benchmark
+![Benchmark](docs/images/03-benchmark.png)
 
-| Benchmark report | Options |
-| --- | --- |
-| ![Benchmark report](docs/images/04-report.png) | ![Options window](docs/images/05-options.png) |
+### Download report
+![Download report](docs/images/04-report.png)
 
-| Options — additional settings | Options — additional settings II |
-| --- | --- |
-| ![Options additional settings](docs/images/06-options-ii.png) | ![Options additional settings II](docs/images/07-options-iii.png) |
-
-The screenshots are part of this documentation repository only; they do not contain or expose the MJYT application source code.
-
-## Platform
-
-- Windows 10/11 x64
-- 64-bit release only
+### Options
+![Options](docs/images/05-options.png)
+![Options II](docs/images/06-options-ii.png)
+![Options III](docs/images/07-options-iii.png)
 
 ## Update checks
 
-MJYT includes an optional **Check new versions** setting. When enabled, it performs an asynchronous lookup of the latest MJYT GitHub release after startup and periodically while the application remains open. It does not automatically download or execute an update.
+The **Check new versions** option is available in **Options** and is enabled by default. When enabled, MJYT checks the latest GitHub release about 10 seconds after startup and then about every 6 hours. Checks run asynchronously and never download or execute an update automatically. A notification shows the installed and newest release labels and can open that release's GitHub page. Disable the option to stop version lookups.
 
-See [Network & privacy](docs/NETWORK_AND_PRIVACY.md) for the public network-behavior summary.
+## Supported platform
+
+- Windows 10/11 x64
+- 64-bit builds only
 
 ## Current limitations
 
 - MJYT is intended for YouTube URLs; it is not a general multi-site downloader.
-- Private, members-only, account-authenticated, rented/purchased, and DRM-protected media are not supported in v1.
-- Media availability still depends on what YouTube exposes to the application and on YouTube's current delivery behavior.
-- YouTube can change its web/player interfaces; such changes can require an MJYT update.
+- Private, members-only, account-authenticated, rented/purchased, or DRM-protected media is not supported.
+- Availability still depends on the media being accessible to the application and on YouTube's current delivery behavior.
+- YouTube can change its web/player interfaces. A future YouTube change may require an MJYT update.
 
-See [FAQ](docs/FAQ.md) for common questions.
+## Building from source
 
-## Release integrity
+Prerequisites:
 
-Official binary releases include SHA-256 checksums. Verify downloaded artifacts against `SHA256SUMS.txt` from the same GitHub Release.
+- Windows x64
+- Microsoft Visual C++ Build Tools / MSVC x64
+- CMake 3.24 or newer
+- Windows PowerShell 5.1 or newer
+- Internet access on the first build so the pinned Ninja build tool can be provisioned and verified
 
-See [Release integrity](docs/RELEASE_INTEGRITY.md).
+Run the fully qualified Release build:
+
+```powershell
+.\run.bat
+```
+
+The resulting qualified release executable and its direct checksum manifest are:
+
+```text
+dist\MJYTv1.1.exe
+dist\SHA256SUMS.txt
+```
+
+`dist\SHA256SUMS.txt` contains the SHA-256 of `MJYTv1.1.exe` generated from the qualified release binary.
+
+For local incremental development builds, use:
+
+```powershell
+.\run-fast.bat
+```
+
+See [`docs/BUILDING.md`](docs/BUILDING.md) for additional details.
 
 ## Versioning
 
-MJYT uses lineage-style release labels rather than Semantic Versioning. The sequence begins with `v1`, followed by `v1.1`, `v1.1.1`, `v1.1.1.1`, and so on.
+MJYT uses lineage-style release labels rather than Semantic Versioning. The release sequence begins at `v1`, then advances as `v1.1`, `v1.1.1`, `v1.1.1.1`, `v1.1.1.2`, and so on. Versions preserve the lineage label exactly and are not padded with zero components. See [`docs/VERSIONING.md`](docs/VERSIONING.md).
 
-See [Versioning](docs/VERSIONING.md).
+## Release integrity
+
+Official releases include a portable ZIP containing the EXE and its SHA-256 manifest, plus an external SHA-256 manifest for release assets. Provenance is retained in local release staging. Verify the downloaded artifact against `SHA256SUMS.txt` from the same release.
 
 ## Licensing
 
-MJYT itself is **not open source** and no public redistribution license has been granted for the MJYT application binaries or proprietary project materials. See [LICENSE.txt](LICENSE.txt).
+MJYT itself currently has **no open-source redistribution license**. Source availability does not grant redistribution or modification rights. See [`LICENSE.txt`](LICENSE.txt).
 
-Third-party assets retain their own licenses. See [Third-party notices](docs/THIRD_PARTY.md).
-
-## Support
-
-For usage problems, bug reports, or feature requests, see [SUPPORT.md](SUPPORT.md).
+Bundled third-party assets retain their own licenses. See [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 ## Disclaimer
 
