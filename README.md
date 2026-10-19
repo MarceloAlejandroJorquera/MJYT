@@ -17,7 +17,7 @@ MJYT v1.1 is a native Windows x64 YouTube downloader focused on a compact, respo
 
 ## Download
 
-For normal use, download the Windows x64 package from the [GitHub Releases page](https://github.com/MarceloAlejandroJorquera/MJYT/releases), extract it, and run `MJYTv1.1.exe`.
+For normal use, download the Windows x64 package from the [MJYT v1.1 release](https://github.com/MarceloAlejandroJorquera/MJYT/releases/tag/v1.1), extract it, and run `MJYTv1.1.exe`.
 
 MJYT is portable. It does not require installation.
 
@@ -35,21 +35,28 @@ The **Add Links** dialog accepts YouTube video and playlist URLs. Malformed or u
 ## Screenshots
 
 ### Main window
-![Main window](docs/images/01-main.png)
+![MJYT v1.1 main window](docs/images/01-main.png)
 
-### Add Links dialog
+<details>
+<summary><strong>Additional screenshots (6)</strong></summary>
+
+### Add Links
 ![Add Links dialog](docs/images/02-links-modal.png)
 
 ### Benchmark
-![Benchmark](docs/images/03-benchmark.png)
+![Built-in benchmark](docs/images/03-benchmark.png)
 
 ### Download report
 ![Download report](docs/images/04-report.png)
 
 ### Options
 ![Options](docs/images/05-options.png)
-![Options II](docs/images/06-options-ii.png)
-![Options III](docs/images/07-options-iii.png)
+
+![Options — additional settings](docs/images/06-options-ii.png)
+
+![Options — additional settings continued](docs/images/07-options-iii.png)
+
+</details>
 
 ## Update checks
 
@@ -67,38 +74,9 @@ The **Check new versions** option is available in **Options** and is enabled by 
 - Availability still depends on the media being accessible to the application and on YouTube's current delivery behavior.
 - YouTube can change its web/player interfaces. A future YouTube change may require an MJYT update.
 
-## Building from source
+## Distribution
 
-Prerequisites:
-
-- Windows x64
-- Microsoft Visual C++ Build Tools / MSVC x64
-- CMake 3.24 or newer
-- Windows PowerShell 5.1 or newer
-- Internet access on the first build so the pinned Ninja build tool can be provisioned and verified
-
-Run the fully qualified Release build:
-
-```powershell
-.\run.bat
-```
-
-The resulting qualified release executable and its direct checksum manifest are:
-
-```text
-dist\MJYTv1.1.exe
-dist\SHA256SUMS.txt
-```
-
-`dist\SHA256SUMS.txt` contains the SHA-256 of `MJYTv1.1.exe` generated from the qualified release binary.
-
-For local incremental development builds, use:
-
-```powershell
-.\run-fast.bat
-```
-
-See [`docs/BUILDING.md`](docs/BUILDING.md) for additional details.
+The public v1.1 release supplies a portable Windows x64 binary ZIP and SHA-256 checksums. The implementation is maintained privately; the custom release attachments contain no source code.
 
 ## Versioning
 
